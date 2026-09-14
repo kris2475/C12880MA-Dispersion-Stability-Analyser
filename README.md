@@ -2,16 +2,16 @@
 
 An open-source optical sensing platform that pairs the **Hamamatsu C12880MA micro-spectrometer** with a multi-port cuvette/immersion housing and machine learning to decouple particle scattering from chemical absorption in complex aqueous solutions.
 
-Traditional ISO 7027 turbidity meters rely on a single near-infrared LED and a 90° photodiode, failing completely when water contains dissolved organic matter (DOM), tannins, algal pigments, or carbon nanomaterials. This project addresses that limitation by capturing full-spectrum (340–850 nm) dual-angle optical signatures to fingerprint water quality components using chemometrics and machine learning.
+Traditional ISO 7027 turbidity meters rely on a single near-infrared LED and a 90° photodiode, failing completely when water contains dissolved organic matter (DOM), tannins, algal pigments, or carbon nanomaterials. This project addresses that limitation by capturing full-spectrum (340–850 nm) optical signatures via a configurable multi-port housing to fingerprint water quality components using chemometrics and machine learning.
 
 ---
 
 ## System Architecture
 
-The hardware architecture moves beyond single-channel nephelometry by capturing light across two optical axes simultaneously:
+The hardware architecture moves beyond single-channel nephelometry by providing a multi-port housing where the light source can be manually positioned:
 
-* **0° Transmission Port:** Measures total optical extinction, combining light absorption from carbon/pigments and forward scattering.
-* **45° Forward-Scattering Port:** Isolates Mie scattering to evaluate particle size distribution and concentration while minimizing the inner-filter absorption effects common in dark suspensions.
+* **0° Transmission Port:** The primary operational axis, measuring total optical extinction combining light absorption from carbon/pigments and forward scattering.
+* **45° Forward-Scattering Port:** A manually swappable alternative position that isolates Mie scattering to evaluate particle size distribution and concentration while minimizing inner-filter absorption effects.
 
 ---
 
@@ -28,18 +28,18 @@ Rather than relying on an isolated reference point, the manufacturer includes th
 * **Micro-Spectrometer:** Hamamatsu C12880MA (288-pixel CMOS image sensor with a reflection grating, 340–850 nm range; features 87 optically shielded dark pixels, P0–P86, for real-time baseline noise subtraction)
 * **Microcontroller:** ESP32 Dev Module (handling precise clock/trigger timing, ADC attenuation, OLED interface, and SD logging)
 * **Light Source:** Broad-spectrum white LED (SunLike 6500K)
-* **Housing:** Custom 3D-printed matte black enclosure with integrated 0° and 45° optical channels, light-tight baffling, and optional immersion probe geometry
+* **Housing:** Custom 3D-printed matte black enclosure with multi-port alignment for 0° transmission (primary) and manual 45° scattering configurations, plus optional immersion probe geometry
 
 ---
 
 ## Optical Physics & Multi-Component Testing
 
-By reading out the sensor array across two angles, the system generates a structured feature tensor per reading to differentiate overlapping chemical and physical signatures:
+By capturing full-spectrum profiles (typically via 0° transmission, supplemented by manual 45° scattering swaps when required), the system differentiates overlapping chemical and physical signatures:
 
 1. **Graphene & Carbon Nanomaterials (GNPs / GO / Carbon Black):** Exhibit a broad, featureless log-linear extinction slope across the entire 340–850 nm spectrum, heavily dominating transmission data.
 2. **Biological Activity (Algae / "Green Slime"):** Introduces distinct absorption dips in the blue (~430–450 nm) and red (~660–680 nm) regions due to chlorophyll-a, turning the optical rig into a fluorometric/absorbance hybrid.
 3. **Natural Organic Matter (Tea / DOM / Tannins):** Causes steep UV-blue absorption tails that decay exponentially toward the infrared, simulating real-world humic interference.
-4. **Mineral Silt / Milk:** Produces high-intensity, uniform Mie scattering profiles across both 0° and 45° ports without deep absorption features.
+4. **Mineral Silt / Milk:** Produces high-intensity, uniform scattering profiles without deep absorption features.
 
 ---
 
@@ -58,6 +58,6 @@ The companion ESP32 firmware features an interactive serial command interface (v
 The repository includes scripts for processing raw spectral frames and training predictive models:
 
 * **Preprocessing & Normalisation:** Real-time dark-pixel subtraction using channels P0–P86 for thermal drift compensation, pixel-to-wavelength mapping via factory calibration coefficients, and baseline drift correction using clean-water reference blanks.
-* **Multi-Output Regression (PLSR / Neural Networks):** Maps the dual-angle spectral tensor to simultaneously predict independent concentrations of suspended solids, carbon nanomaterials, and organic contaminants.
+* **Multi-Output Regression (PLSR / Neural Networks):** Maps spectral data to simultaneously predict independent concentrations of suspended solids, carbon nanomaterials, and organic contaminants.
 * **Unsupervised Anomaly Detection:** Uses autoencoders or isolation forests trained on baseline water standards to flag sudden pollution events, biological blooms, or structural aggregation shifts via reconstruction error spikes.
 
