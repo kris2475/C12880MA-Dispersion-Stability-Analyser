@@ -15,7 +15,7 @@ The hardware architecture moves beyond single-channel nephelometry by capturing 
 
 ### Hardware Bill of Materials
 * **Micro-Spectrometer:** Hamamatsu C12880MA (288-pixel CMOS image sensor with a reflection grating, 340–850 nm range)
-* **Light Source:** Broad-spectrum white LED (or multi-wavelength LED matrix) with collimating optics
+* **Light Source:** Broad-spectrum white LED (Sunlike 6500K)
 * **Sample Chamber:** Custom 3D-printed or machined housing with integrated 0° and 45° optical channels and light-tight baffling
 * **Microcontroller:** ESP32, Teensy 4.0/4.1, or STM32 (capable of handling precise clock/trigger timing for the C12880MA)
 
