@@ -57,7 +57,7 @@ The companion ESP32 firmware features an interactive serial command interface (v
 
 The repository includes scripts for processing raw spectral frames and training predictive models:
 
-* **Preprocessing & Normalization:** Real-time dark-pixel subtraction using channels P0–P86 for thermal drift compensation, pixel-to-wavelength mapping via factory calibration coefficients, and baseline drift correction using clean-water reference blanks.
+* **Preprocessing & Normalisation:** Real-time dark-pixel subtraction using channels P0–P86 for thermal drift compensation, pixel-to-wavelength mapping via factory calibration coefficients, and baseline drift correction using clean-water reference blanks.
 * **Multi-Output Regression (PLSR / Neural Networks):** Maps the dual-angle spectral tensor to simultaneously predict independent concentrations of suspended solids, carbon nanomaterials, and organic contaminants.
-* **Unsupervised Anomaly Detection:** Utilizes autoencoders or isolation forests trained on baseline water standards to flag sudden pollution events, biological blooms, or structural aggregation shifts via reconstruction error spikes.
+* **Unsupervised Anomaly Detection:** Uses autoencoders or isolation forests trained on baseline water standards to flag sudden pollution events, biological blooms, or structural aggregation shifts via reconstruction error spikes.
 
