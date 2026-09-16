@@ -47,7 +47,7 @@ By capturing full-spectrum temporal data (e.g., minute-by-minute logs of shaken 
 
 3. **Peak Wavelength & Structural Shape Shifts:** 
    * Identifies discrete shifts, broadening, or fluctuations in maximum scattering peaks over extended time series.
-   * Decouples bulk chemical identity and baseline intensity changes from physical structural modifications, confirming whether the primary scattering centre remains stable while localized clustering, swelling, or spatial redistribution occurs within the dispersion.
+   * Decouples bulk chemical identity and baseline intensity changes from physical structural modifications, confirming whether the primary scattering centre remains stable while localised clustering, swelling, or spatial redistribution occurs within the dispersion.
 
 ---
 
