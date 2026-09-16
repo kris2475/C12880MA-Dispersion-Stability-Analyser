@@ -69,7 +69,7 @@ To validate the multiwavelength pipeline under real-world conditions, a dynamic 
 ### 1. Raw Spectral Evolution: Waterfall & Spectrogram View
 The initial optical behavior of the dispersion is captured across the raw spectral response. 
 
-<img src="Turmeric_spectra.png" alt="Waterfall plot of raw turmeric spectra" width="700">
+<!-- <img src="C12880MA_Dispersion_Analyser/Turmeric_spectra.png" alt="Waterfall plot of raw turmeric spectra" width="700"> -->
 
 * **What we are seeing:** The raw waterfall/overlay plot above demonstrates the complete spectral signature captured by the Hamamatsu C12880MA spectrometer, ranging from the UV-visible cutoff through the characteristic curcuminoid absorption and scattering bands (peaking around 560–590 nm). 
 * **Connection to the Pipeline:** This corresponds directly to the raw data input stage of our pipeline. Unlike a single-wavelength sensor that only logs a single scalar value, this full spectral sweep captures the entire optical envelope at every 60-second time step. The dense vertical lines visible in early iterations highlight how the hardware pixel resolution responds across the spectrum before baseline dark-correction is applied.
@@ -79,7 +79,7 @@ The initial optical behavior of the dispersion is captured across the raw spectr
 ### 2. Kinetic Breakdown & Multi-Parameter Analysis
 To decode the physical phenomena occurring inside the vial, the raw spectra were processed through our multiwavelength analytical framework, yielding three distinct diagnostic time profiles.
 
-<img src="Turmeric_panels.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
+<img src="C12880MA_Dispersion_Analyser/Turmeric_panels.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
 * **Panel 1: Sedimentation Tracking (Total Scattering Mass)**
   * **What it shows:** The normalized total integrated intensity starts at a baseline of 100% and climbs sharply over the first 20 minutes before stabilizing near 180–190%. 
