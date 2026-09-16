@@ -1,17 +1,17 @@
-# Multi-Angle Spectral Water Quality Analyser
+# Multiwavelength Dispersion Analyser
 
-An open-source optical sensing platform that pairs the **Hamamatsu C12880MA micro-spectrometer** with a multi-port cuvette/immersion housing and machine learning to decouple particle scattering from chemical absorption in complex aqueous solutions.
+A low-cost, highly portable optical sensing platform designed for field and lab use, pairing the **Hamamatsu C12880MA micro-spectrometer** with its **onboard PCB LED illumination source** to track stability, flocculation, agglomeration, and sedimentation dynamics in complex liquid dispersions.
 
-Traditional ISO 7027 turbidity meters rely on a single near-infrared LED and a 90° photodiode, failing completely when water contains dissolved organic matter (DOM), tannins, algal pigments, or carbon nanomaterials. This project addresses that limitation by capturing full-spectrum (340–850 nm) optical signatures via a configurable multi-port housing to fingerprint water quality components using chemometrics and machine learning.
+Traditional stability analysers rely on single-wavelength light sources and a single photodiode, capturing only a blunt aggregate transmission number. This project evolves that proven industrial concept into a full-spectrum (340–850 nm) optical tool. By listening to every wavelength simultaneously, the system can decouple overall scattering mass from time-dependent particle size shifts, micro-bubble relaxation phases, and differential sedimentation.
 
 ---
 
-## System Architecture
+## System Architecture & Field Portability
 
-The hardware architecture moves beyond single-channel nephelometry by providing a multi-port housing where the light source can be manually positioned:
+Engineered for rapid deployment outside the traditional laboratory, the device combines low-power microcontrollers with precision optical hardware:
 
-* **0° Transmission Port:** The primary operational axis, measuring total optical extinction combining light absorption from carbon/pigments and forward scattering.
-* **45° Forward-Scattering Port:** A manually swappable alternative position that isolates Mie scattering to evaluate particle size distribution and concentration while minimizing inner-filter absorption effects.
+* **0° Transmission & Extinction Axis:** The primary operational path, tracking total optical density, scattering, and initial de-aeration/bubble-clearing behavior immediately after sample agitation.
+* **Multi-Angle Optical Probing:** Configurable housing geometry designed to capture multiwavelength extinction and scattering profiles across the entire visible-to-near-infrared spectrum.
 
 ---
 
@@ -19,45 +19,33 @@ The hardware architecture moves beyond single-channel nephelometry by providing 
 
 The Hamamatsu C12880MA sensor array comprises 288 total channels. The first 87 columns (**P0 through P86**) correspond to a dedicated sequence of physically shielded pixels on the sensor die. 
 
-Rather than relying on an isolated reference point, the manufacturer includes this continuous block of masked elements to serve as a robust optical black reference. Because these elements receive zero light from the diffraction grating, their output captures the sensor's native dark current, reset noise, and electronic baseline offsets, forming the characteristic flat plateau observed at the beginning of the raw data stream prior to the active, light-sensitive pixel region. The firmware uses these values for real-time thermal drift and offset subtraction on every scan.
+Rather than relying on an isolated external reference, these masked elements capture the sensor's native dark current, reset noise, and electronic baseline offsets in real time. The firmware uses this continuous block for thermal drift and offset subtraction on every individual scan, ensuring high repeatability in field conditions.
 
 ---
 
 ## Hardware Bill of Materials
 
-* **Micro-Spectrometer:** Hamamatsu C12880MA (288-pixel CMOS image sensor with a reflection grating, 340–850 nm range; features 87 optically shielded dark pixels, P0–P86, for real-time baseline noise subtraction)
-* **Microcontroller:** ESP32 Dev Module (handling precise clock/trigger timing, ADC attenuation, OLED interface, and SD logging)
-* **Light Source:** Broad-spectrum white LED (SunLike 6500K)
-* **Housing:** Custom 3D-printed matte black enclosure with multi-port alignment for 0° transmission (primary) and manual 45° scattering configurations, plus optional immersion probe geometry
+* **Micro-Spectrometer & Light Source:** Hamamatsu C12880MA micro-spectrometer module utilizing its **onboard PCB LED** as the illumination source (288-pixel CMOS image sensor with a reflection grating, 340–850 nm range; features 87 optically shielded dark pixels, P0–P86, for real-time baseline noise subtraction).
+* **Microcontroller:** ESP32 Dev Module (handling precise clock timing, ADC attenuation, OLED interface, and SD card logging).
+* **Housing:** Custom 3D-printed matte black, lightweight portable enclosure optimized for standard optical vials/cuvettes and secure alignment with the spectrometer PCB.
 
 ---
 
-## Optical Physics & Multi-Component Testing
+## Dispersion Physics & Kinetic Analysis Pipeline
 
-By capturing full-spectrum profiles (typically via 0° transmission, supplemented by manual 45° scattering swaps when required), the system differentiates overlapping chemical and physical signatures:
+By capturing full-spectrum temporal data (e.g., minute-by-minute logs of shaken suspensions like turmeric or starch in water), the companion Python and firmware tools extract three core kinetic metrics:
 
-1. **Graphene & Carbon Nanomaterials (GNPs / GO / Carbon Black):** Exhibit a broad, featureless log-linear extinction slope across the entire 340–850 nm spectrum, heavily dominating transmission data.
-2. **Biological Activity (Algae / "Green Slime"):** Introduces distinct absorption dips in the blue (~430–450 nm) and red (~660–680 nm) regions due to chlorophyll-a, turning the optical rig into a fluorometric/absorbance hybrid.
-3. **Natural Organic Matter (Tea / DOM / Tannins):** Causes steep UV-blue absorption tails that decay exponentially toward the infrared, simulating real-world humic interference.
-4. **Mineral Silt / Milk:** Produces high-intensity, uniform scattering profiles without deep absorption features.
+1. **Sedimentation Tracking (Total Scattering Mass):** Monitors the total integrated intensity across all active wavelengths to evaluate overall particle suspension mass and capture preparation artifacts, such as micro-bubble clearance immediately following sample shaking.
+2. **Agglomeration & Flocculation Tracking (Spectral Slope Ratios):** Computes intensity ratios (e.g., 650 nm / 450 nm) to detect changes in the spectral tilt. This isolates differential sedimentation, where heavier coarser aggregates drop out rapidly while finer micro-particles remain suspended.
+3. **Peak Wavelength & Shape Shifts:** Identifies shifts in maximum scattering peaks to track structural changes or particle growth within the dispersion over extended time series.
 
 ---
 
-## Firmware & Data Logging Features
+## Firmware & Field-Ready Data Logging
 
-The companion ESP32 firmware features an interactive serial command interface (via Serial Monitor or Tera Term) supporting:
-* **Real-Time Auto-Exposure:** Automatically scales integration time (11 ms to 1 s) to keep peak ADC values within target optimal bounds (2500–3500).
-* **Periodic Interval Datalogging (`LOG <sec>`):** Automatically saves timestamped spectral frames to an attached SD card at user-defined intervals (e.g., `LOG 15` logs every 15 seconds).
-* **Burst Capture (`B`):** Rapidly captures a 10-frame RAM buffer following a pre-flight auto-exposure stabilization phase and writes the batch to the master CSV log.
+The companion ESP32 firmware features an interactive serial interface supporting deployment in the field:
+* **Real-Time Auto-Exposure:** Automatically scales integration time (11 ms to 1 s) to keep peak ADC values within optimal target bounds.
+* **Periodic Interval Datalogging (`LOG <sec>`):** Automatically saves timestamped spectral frames to an attached SD card at user-defined intervals (ideal for tracking long-term stability curves over 30 to 60+ minutes).
+* **Burst Capture (`B`):** Rapidly captures a RAM buffer following a pre-flight auto-exposure stabilization phase.
 * **Metadata Tagging (`COMMENT <text>`):** Appends custom text tags directly to log entries for field sample tracking.
-
----
-
-## Machine Learning & Chemometric Pipeline
-
-The repository includes scripts for processing raw spectral frames and training predictive models:
-
-* **Preprocessing & Normalisation:** Real-time dark-pixel subtraction using channels P0–P86 for thermal drift compensation, pixel-to-wavelength mapping via factory calibration coefficients, and baseline drift correction using clean-water reference blanks.
-* **Multi-Output Regression (PLSR / Neural Networks):** Maps spectral data to simultaneously predict independent concentrations of suspended solids, carbon nanomaterials, and organic contaminants.
-* **Unsupervised Anomaly Detection:** Uses autoencoders or isolation forests trained on baseline water standards to flag sudden pollution events, biological blooms, or structural aggregation shifts via reconstruction error spikes.
 
