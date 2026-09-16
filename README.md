@@ -77,17 +77,17 @@ The initial optical behavior of the dispersion is captured across the raw spectr
 ---
 
 ### 2. Kinetic Breakdown & Multi-Parameter Analysis
-To decode the physical phenomena occurring inside the vial, the raw spectra were processed through our multiwavelength analytical framework, yielding three distinct diagnostic time profiles.
+To understand the physical phenomena occurring inside the vial, the raw spectra were processed through my multiwavelength analytical framework, yielding three distinct diagnostic time profiles.
 
 <img src="C12880MA_Dispersion_Analyser/Turmeric_panels.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
 * **Panel 1: Sedimentation Tracking (Total Scattering Mass)**
-  * **What it shows:** The normalized total integrated intensity starts at a baseline of 100% and climbs sharply over the first 20 minutes before stabilizing near 180–190%. 
-  * **Physics Connection:** This unmasks the **micro-bubble clearance phase**. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behavior of the suspension mass.
+  * **What it shows:** The normalised total integrated intensity starts at a baseline of 100 % and climbs sharply over the first 20 minutes before stabilising near 180 - 190 %. 
+  * **Physics Connection:** This unmasks the **micro-bubble clearance phase**. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
 * **Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)**
   * **What it shows:** The intensity ratio between 650 nm and 450 nm plummets dramatically from an initial extreme value of ~17.5 down to ~3 within the first 5 minutes.
   * **Physics Connection:** This tracks the breakdown and structural relaxation of large, forced agglomerates created during manual mixing. The high initial slope indicates a heavily skewed scattering profile dominated by large clusters. As these clusters settle or break apart into a more uniform colloidal distribution, the spectral tilt flattens into a stable steady state.
 * **Panel 3: Peak Shift Tracking**
-  * **What it shows:** The apex wavelength of the primary dispersion band oscillates in a regular quantization pattern between ~587.5 nm and ~594.5 nm, with transient excursions up to 605 nm.
-  * **Physics Connection:** This demonstrates the limits and behavior of **pixel-resolution quantization** on discrete spectrometer arrays. As the true optical peak center shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes (e.g., at minute 22) capture genuine, momentary bulk shifts where a broader particle cluster migration transiently altered the spectral envelope's center of mass.
+  * **What it shows:** The apex wavelength of the primary dispersion band oscillates in a regular quantisation pattern between ~587.5 nm and ~594.5 nm, with transient excursions up to 605 nm.
+  * **Physics Connection:** This demonstrates the limits and behaviour of **pixel-resolution quantisation** on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes (e.g., at minute 22) capture genuine, momentary bulk shifts where a broader particle cluster migration transiently altered the spectral envelope's center of mass.
 
