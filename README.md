@@ -33,11 +33,21 @@ Rather than relying on an isolated external reference, these masked elements cap
 
 ## Dispersion Physics & Kinetic Analysis Pipeline
 
-By capturing full-spectrum temporal data (e.g., minute-by-minute logs of shaken suspensions like turmeric or starch in water), the companion Python and firmware tools extract three core kinetic metrics:
+By capturing full-spectrum temporal data (e.g., minute-by-minute logs of shaken suspensions like turmeric or starch in water), the companion Python and firmware tools extract rich kinetic metrics underpinned by fundamental optical scattering and fluid dynamics principles:
 
-1. **Sedimentation Tracking (Total Scattering Mass):** Monitors the total integrated intensity across all active wavelengths to evaluate overall particle suspension mass and capture preparation artefacts, such as micro-bubble clearance immediately following sample shaking.
-2. **Agglomeration & Flocculation Tracking (Spectral Slope Ratios):** Computes intensity ratios (e.g., 650 nm / 450 nm) to detect changes in the spectral tilt. This isolates differential sedimentation, where heavier coarser aggregates drop out rapidly while finer micro-particles remain suspended.
-3. **Peak Wavelength & Shape Shifts:** Identifies shifts in maximum scattering peaks to track structural changes or particle growth within the dispersion over extended time series.
+1. **Sedimentation Tracking (Total Scattering Mass & Stokes' Law):** 
+   * Monitors the total integrated intensity across all active wavelengths to evaluate overall suspended particle mass in real time.
+   * Captures initial preparation artefacts, such as micro-bubble clearance and de-aeration phases immediately following sample agitation.
+   * Reflects bulk particle concentration changes governed by gravitational settling dynamics (approximate Stokes' settling), where particle size, mass density differentials, and fluid viscosity dictate how matter migrates relative to the optical path.
+
+2. **Agglomeration & Flocculation Tracking (Mie Scattering & Spectral Slope Ratios):** 
+   * Computes multiwavelength intensity ratios (e.g., $650\text{nm} / 450\text{nm}$) to detect continuous changes in spectral tilt and slope.
+   * Leverages the principles of Mie scattering theory, where scattering efficiency and angular distribution vary significantly depending on how particle diameters scale relative to the incident wavelengths.
+   * Isolates differential sedimentation and flocculation, revealing how heavier or coarser aggregates drop out rapidly while finer fractions remain suspended or form loose structural clusters that alter the wavelength-dependent scattering profile.
+
+3. **Peak Wavelength & Structural Shape Shifts:** 
+   * Identifies discrete shifts, broadening, or fluctuations in maximum scattering peaks over extended time series.
+   * Decouples bulk chemical identity and baseline intensity changes from physical structural modifications, confirming whether the primary scattering centre remains stable while localized clustering, swelling, or spatial redistribution occurs within the dispersion.
 
 ---
 
