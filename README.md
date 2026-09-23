@@ -98,18 +98,16 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 <img src="C12880MA_Dispersion_Analyser/plots.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
 
- 
-### 2. Sedimentation vs. Spectral Ratio
 
-The strong negative correlation (-0.9834) observed between normalized total intensity (sedimentation) and the spectral ratio (agglemoration/flocculation) can be clearly visualized using a scatter plot. This plot helps to confirm the inverse relationship and understand its linearity.
+
+### 3. Sedimentation vs. Spectral Ratio
+
+The strong negative Pearson correlation coefficient of -0.9834 observed between normalized total intensity (sedimentation) and the spectral ratio (agglomeration/flocculation) is clearly illustrated in the scatter plot below[cite: 2]. This visualization confirms a robust inverse relationship mapping optical scattering mass against spectral slope dynamics[cite: 2].
 
 <img src="C12880MA_Dispersion_Analyser/Sedimentation_vs_Spectral_Ratio.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
-Correlation Analysis: Sedimentation vs. Spectral Ratio
-Pearson Correlation Coefficient: The calculated Pearson Correlation between Sedimentation (Normalised Total Intensity) and Spectral Ratio (650nm/450nm) is -0.9834.
-
-Significance: This indicates a very strong negative correlation. A correlation coefficient close to -1 suggests that as one variable increases, the other decreases proportionally. In this context:
-
-As the Normalised Total Intensity (Sedimentation) increases (meaning less sedimentation or even an increase in apparent scattering due to other factors), the Spectral Ratio (Agglomeration/Flocculation) decreases.
-This strong inverse relationship suggests that the processes influencing the overall scattering intensity are tightly coupled with those altering the spectral slope. For instance, if particles are settling, the total intensity might decrease, and if they are also agglomerating, the spectral ratio might change in a corresponding manner. The observed strong negative correlation implies that the spectral changes related to particle size (reflected in the spectral ratio) are consistently happening in tandem with changes in the total dispersed mass or scattering strength (reflected in the normalised total intensity).
+#### Correlation Analysis & Physical Coupling
+* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100% up to approximately 205% on the x-axis against the 650nm/450nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis[cite: 2].
+* **Inverse Proportionality:** As the Normalised Total Intensity increases—driven by micro-bubble clearance and enhanced optical path clarity—the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75[cite: 2].
+* **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of scattering obstructions aligns directly with the structural relaxation and breakdown of large particle agglomerates into a stable colloidal state[cite: 2].
 
