@@ -78,33 +78,26 @@ The initial optical behavior of the dispersion is captured across the raw spectr
 ---
 
 ### 2. Kinetic Breakdown & Multi-Parameter Analysis
-To understand the physical phenomena occurring inside the vial, the raw spectra were processed through my multiwavelength analytical framework, yielding three distinct diagnostic time profiles.
+
+To understand the physical phenomena occurring inside the vial, the raw spectra were processed through the multiwavelength analytical framework, yielding three distinct diagnostic time profiles. The dispersion stability analysis provides insights into how the sample's spectral properties change over time, indicating potential physical processes like sedimentation, agglomeration, or flocculation.
+
+* **Important Context:** The dispersion was shaken before logging, which influences initial spectral readings due to temporary air bubbles and increased initial homogeneity. After the logging run, sedimentation of particles was observed at the bottom of the vial.
+
+### Panel 1: Sedimentation Tracking (Total Scattering Mass)
+* **What it shows:** The normalised total integrated intensity starts at a baseline of 100% and climbs sharply over the first 10 to 15 minutes, reaching ~180% by minute 10 and stabilising near a plateau of 190% to 202% for the remainder of the run.
+* **Physics Connection:** This unmasks the micro-bubble clearance phase. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
+
+### Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)
+* **What it shows:** The intensity ratio between 650 nm and 450 nm drops rapidly from an initial value of ~1.06 down to ~0.87 within the first 3 minutes, before gradually levelling off into a stable baseline around 0.75 by minute 15.
+* **Physics Connection:** This tracks the breakdown and structural relaxation of large, forced agglomerates created during manual mixing. The higher initial slope indicates a heavily skewed scattering profile dominated by large clusters. As these clusters settle or break apart into a more uniform colloidal distribution, the spectral tilt flattens into a steady state.
+
+### Panel 3: Peak Shift Tracking
+* **What it shows:** The apex wavelength of the primary dispersion band oscillates within a discrete band between ~581.25 nm and ~598.75 nm, featuring sharp quantisation steps with prominent transient spikes reaching nearly 599 nm at approximately minutes 2, 12, and 27.
+* **Physics Connection:** This demonstrates the limits and behaviour of pixel-resolution quantisation on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes capture genuine, momentary bulk shifts where transient cluster migrations altered the spectral envelope's center of mass.
 
 <img src="C12880MA_Dispersion_Analyser/plots.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
 
-
-The dispersion stability analysis provides insights into how the sample's spectral properties change over time, indicating potential physical processes like sedimentation, agglomeration, or flocculation.
-
-Important Context: The dispersion was shaken before logging, which might influence initial spectral readings due to temporary air bubbles or increased homogeneity. After the logging run, sedimentation of turmeric particles was observed at the bottom of the vial.
-
-Automated Dispersion Stability Report Breakdown:
-
-Sedimentation Rate: The report indicates a sedimentation rate of 2.280% change per minute. The status "Suspension is stable against heavy sedimentation." suggests that while there is some change, it's not severe enough to be classified as significant particle dropout based on the defined threshold (-0.5%). The first plot, "1. Sedimentation Tracking (Total Scattering Mass)", visually represents this trend. A relatively flat line close to 100% (initial intensity) confirms stability against rapid settling.
-
-Agglomeration Slope: The agglomeration slope is reported as -0.00606 units/min, triggering an alert: "Spectral slope shifting, indicating possible particle growth/flocculation." This suggests that the ratio of intensities at 650nm to 450nm is changing, which can be an indicator of particles either growing in size or aggregating together. The second plot, "2. Agglomeration / Flocculation Tracking (Spectral Slope)", illustrates this spectral ratio over time. A noticeable trend (either increasing or decreasing) in this plot supports the alert, implying changes in particle size distribution.
-
-Peak Shift Tracking: The third plot, "3. Peak Shift Tracking", shows how the wavelength of the maximum intensity changes over time. While the automated report didn't explicitly comment on this metric, this plot helps visualise any shifts in the characteristic absorption or scattering peak of the sample. Significant shifts could indicate chemical reactions or substantial changes in particle morphology/size.
-
-* **Panel 1: Sedimentation Tracking (Total Scattering Mass)**
-  * **What it shows:** The normalised total integrated intensity starts at a baseline of 100 % and climbs sharply over the first 20 minutes before stabilising near 180 - 190 %. 
-  * **Physics Connection:** This unmasks the **micro-bubble clearance phase**. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
-* **Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)**
-  * **What it shows:** The intensity ratio between 650 nm and 450 nm plummets dramatically from an initial extreme value of ~17.5 down to ~3 within the first 5 minutes.
-  * **Physics Connection:** This tracks the breakdown and structural relaxation of large, forced agglomerates created during manual mixing. The high initial slope indicates a heavily skewed scattering profile dominated by large clusters. As these clusters settle or break apart into a more uniform colloidal distribution, the spectral tilt flattens into a stable steady state.
-* **Panel 3: Peak Shift Tracking**
-  * **What it shows:** The apex wavelength of the primary dispersion band oscillates in a regular quantisation pattern between ~587.5 nm and ~594.5 nm, with transient excursions up to 605 nm.
-  * **Physics Connection:** This demonstrates the limits and behaviour of **pixel-resolution quantisation** on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes (e.g., at minute 22) capture genuine, momentary bulk shifts where a broader particle cluster migration transiently altered the spectral envelope's center of mass.
  
 ### 2. Sedimentation vs. Spectral Ratio
 
