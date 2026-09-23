@@ -20,7 +20,7 @@ Engineered for rapid deployment outside the traditional laboratory, the device c
 
 ## Sensor Layout & Dark Pixel Reference
 
-The Hamamatsu C12880MA sensor array comprises 288 total channels. The first 87 columns (**P0 through P86**) correspond to a dedicated sequence of physically shielded pixels on the sensor die. 
+The Hamamatsu C12880MA sensor array comprises 288 total channels. The 288-pixel spectral detector provides a full 340–850 nm spectral measurement at approximately 12 nm FWHM resolution. The first 87 columns (**P0 through P86**) correspond to a dedicated sequence of physically shielded pixels on the sensor die. 
 
 Rather than relying on an isolated external reference, these masked elements capture the sensor's native dark current, reset noise, and electronic baseline offsets in real time. The firmware uses this continuous block for thermal drift and offset subtraction on every individual scan, ensuring high repeatability in field conditions.
 
