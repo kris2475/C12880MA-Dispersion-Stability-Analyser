@@ -84,7 +84,7 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 * **Important Context:** The dispersion was shaken before logging, which influences initial spectral readings due to temporary air bubbles and increased initial homogeneity. After the logging run, sedimentation of particles was observed at the bottom of the vial.
 
 ### Panel 1: Sedimentation Tracking (Total Scattering Mass)
-* **What it shows:** The normalised total integrated intensity starts at a baseline of 100% and climbs sharply over the first 10 to 15 minutes, reaching ~180% by minute 10 and stabilising near a plateau of 190% to 202% for the remainder of the run.
+* **What it shows:** The normalised total integrated intensity starts at a baseline of 100% and climbs sharply over the first 10 to 15 minutes, reaching ~180% by minute 10 and stabilising near a plateau of 190 % to 202 % for the remainder of the run.
 * **Physics Connection:** This unmasks the micro-bubble clearance phase. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
 
 ### Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)
@@ -107,7 +107,7 @@ The strong negative Pearson correlation coefficient of -0.9834 observed between 
 <img src="C12880MA_Dispersion_Analyser/Sedimentation_vs_Spectral_Ratio.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
-* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100% up to approximately 205% on the x-axis against the 650nm/450nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
+* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 205 % on the x-axis against the 650nm/450nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
 * **Inverse Proportionality:** As the Normalised Total Intensity increases—driven by micro-bubble clearance and enhanced optical path clarity—the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75.
 * **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of scattering obstructions aligns directly with the structural relaxation and breakdown of large particle agglomerates into a stable colloidal state.
 
