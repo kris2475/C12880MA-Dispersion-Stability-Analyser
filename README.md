@@ -6,6 +6,8 @@ Traditional stability analysers rely on single-wavelength light sources and a si
 
 <img src="/C12880MA_Dispersion_Analyser/IMG20260923084638.jpg" alt="Multiwavelength Dispersion Analyser" width="500">
 
+<img src="C12880MA_Dispersion_Analyser/IMG20260923084638.jpg" alt="Multiwavelength Dispersion Analyser" width="500">
+
 ---
 
 ## System Architecture & Field Portability
