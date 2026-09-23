@@ -4,7 +4,7 @@ A low-cost, highly portable optical sensing platform designed for field and lab 
 
 Traditional stability analysers rely on single-wavelength light sources and a single photodiode, capturing only a blunt aggregate transmission number. This project evolves that proven industrial concept into a full-spectrum (340 - 850 nm) optical tool. By monitoring every wavelength simultaneously, the system can decouple overall scattering mass from time-dependent particle size shifts, micro-bubble relaxation phases, and differential sedimentation.
 
-<img src="C12880MA_Dispersion_Analyser/IMG20260923084638.jpg" alt="Multiwavelength Dispersion Analyser" width="500">
+<img src="/C12880MA_Dispersion_Analyser/IMG20260923084638.jpg" alt="Multiwavelength Dispersion Analyser" width="500">
 
 ---
 
