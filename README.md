@@ -110,7 +110,7 @@ Peak Shift Tracking: The third plot, "3. Peak Shift Tracking", shows how the wav
 
 The strong negative correlation (-0.9834) observed between normalized total intensity (sedimentation) and the spectral ratio (agglemoration/flocculation) can be clearly visualized using a scatter plot. This plot helps to confirm the inverse relationship and understand its linearity.
 
-<img src="C12880MA_Dispersion_Analyser/plots.png" alt="Sedimentation vs. Spectral Ratio" width="700">
+<img src="C12880MA_Dispersion_Analyser/Sedimentation_vs_Spectral_Ratio.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 Correlation Analysis: Sedimentation vs. Spectral Ratio
 Pearson Correlation Coefficient: The calculated Pearson Correlation between Sedimentation (Normalised Total Intensity) and Spectral Ratio (650nm/450nm) is -0.9834.
