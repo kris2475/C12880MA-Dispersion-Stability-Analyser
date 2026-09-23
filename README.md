@@ -82,6 +82,20 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 
 <img src="C12880MA_Dispersion_Analyser/plots.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
+
+
+The dispersion stability analysis provides insights into how the sample's spectral properties change over time, indicating potential physical processes like sedimentation, agglomeration, or flocculation.
+
+Important Context: The dispersion was shaken before logging, which might influence initial spectral readings due to temporary air bubbles or increased homogeneity. After the logging run, sedimentation of turmeric particles was observed at the bottom of the vial.
+
+Automated Dispersion Stability Report Breakdown:
+
+Sedimentation Rate: The report indicates a sedimentation rate of 2.280% change per minute. The status "Suspension is stable against heavy sedimentation." suggests that while there is some change, it's not severe enough to be classified as significant particle dropout based on the defined threshold (-0.5%). The first plot, "1. Sedimentation Tracking (Total Scattering Mass)", visually represents this trend. A relatively flat line close to 100% (initial intensity) confirms stability against rapid settling.
+
+Agglomeration Slope: The agglomeration slope is reported as -0.00606 units/min, triggering an alert: "Spectral slope shifting, indicating possible particle growth/flocculation." This suggests that the ratio of intensities at 650nm to 450nm is changing, which can be an indicator of particles either growing in size or aggregating together. The second plot, "2. Agglomeration / Flocculation Tracking (Spectral Slope)", illustrates this spectral ratio over time. A noticeable trend (either increasing or decreasing) in this plot supports the alert, implying changes in particle size distribution.
+
+Peak Shift Tracking: The third plot, "3. Peak Shift Tracking", shows how the wavelength of the maximum intensity changes over time. While the automated report didn't explicitly comment on this metric, this plot helps visualise any shifts in the characteristic absorption or scattering peak of the sample. Significant shifts could indicate chemical reactions or substantial changes in particle morphology/size.
+
 * **Panel 1: Sedimentation Tracking (Total Scattering Mass)**
   * **What it shows:** The normalised total integrated intensity starts at a baseline of 100 % and climbs sharply over the first 20 minutes before stabilising near 180 - 190 %. 
   * **Physics Connection:** This unmasks the **micro-bubble clearance phase**. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
@@ -91,4 +105,18 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 * **Panel 3: Peak Shift Tracking**
   * **What it shows:** The apex wavelength of the primary dispersion band oscillates in a regular quantisation pattern between ~587.5 nm and ~594.5 nm, with transient excursions up to 605 nm.
   * **Physics Connection:** This demonstrates the limits and behaviour of **pixel-resolution quantisation** on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes (e.g., at minute 22) capture genuine, momentary bulk shifts where a broader particle cluster migration transiently altered the spectral envelope's center of mass.
+ 
+### 2. Sedimentation vs. Spectral Ratio
+
+The strong negative correlation (-0.9834) observed between normalized total intensity (sedimentation) and the spectral ratio (agglemoration/flocculation) can be clearly visualized using a scatter plot. This plot helps to confirm the inverse relationship and understand its linearity.
+
+<img src="C12880MA_Dispersion_Analyser/plots.png" alt="Sedimentation vs. Spectral Ratio" width="700">
+
+Correlation Analysis: Sedimentation vs. Spectral Ratio
+Pearson Correlation Coefficient: The calculated Pearson Correlation between Sedimentation (Normalised Total Intensity) and Spectral Ratio (650nm/450nm) is -0.9834.
+
+Significance: This indicates a very strong negative correlation. A correlation coefficient close to -1 suggests that as one variable increases, the other decreases proportionally. In this context:
+
+As the Normalised Total Intensity (Sedimentation) increases (meaning less sedimentation or even an increase in apparent scattering due to other factors), the Spectral Ratio (Agglomeration/Flocculation) decreases.
+This strong inverse relationship suggests that the processes influencing the overall scattering intensity are tightly coupled with those altering the spectral slope. For instance, if particles are settling, the total intensity might decrease, and if they are also agglomerating, the spectral ratio might change in a corresponding manner. The observed strong negative correlation implies that the spectral changes related to particle size (reflected in the spectral ratio) are consistently happening in tandem with changes in the total dispersed mass or scattering strength (reflected in the normalised total intensity).
 
