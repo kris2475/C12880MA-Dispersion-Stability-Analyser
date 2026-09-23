@@ -80,7 +80,7 @@ The initial optical behavior of the dispersion is captured across the raw spectr
 ### 2. Kinetic Breakdown & Multi-Parameter Analysis
 To understand the physical phenomena occurring inside the vial, the raw spectra were processed through my multiwavelength analytical framework, yielding three distinct diagnostic time profiles.
 
-<img src="C12880MA_Dispersion_Analyser/Turmeric_panels.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
+<img src="C12880MA_Dispersion_Analyser/plots.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
 
 * **Panel 1: Sedimentation Tracking (Total Scattering Mass)**
   * **What it shows:** The normalised total integrated intensity starts at a baseline of 100 % and climbs sharply over the first 20 minutes before stabilising near 180 - 190 %. 
