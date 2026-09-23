@@ -107,7 +107,7 @@ The strong negative Pearson correlation coefficient of -0.9834 observed between 
 <img src="C12880MA_Dispersion_Analyser/Sedimentation_vs_Spectral_Ratio.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
-* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100% up to approximately 205% on the x-axis against the 650nm/450nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis[cite: 2].
-* **Inverse Proportionality:** As the Normalised Total Intensity increases—driven by micro-bubble clearance and enhanced optical path clarity—the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75[cite: 2].
-* **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of scattering obstructions aligns directly with the structural relaxation and breakdown of large particle agglomerates into a stable colloidal state[cite: 2].
+* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100% up to approximately 205% on the x-axis against the 650nm/450nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
+* **Inverse Proportionality:** As the Normalised Total Intensity increases—driven by micro-bubble clearance and enhanced optical path clarity—the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75.
+* **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of scattering obstructions aligns directly with the structural relaxation and breakdown of large particle agglomerates into a stable colloidal state.
 
