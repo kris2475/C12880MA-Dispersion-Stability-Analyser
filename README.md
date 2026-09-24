@@ -108,7 +108,7 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 
 The strong negative Pearson correlation coefficient of -0.9834 observed between normalized total intensity and the spectral ratio is clearly illustrated in the scatter plot below. This visualisation confirms a robust inverse relationship mapping optical scattering mass against spectral slope dynamics, heavily influenced during the early phase by micro-bubble clearance.
 
-<img src="C12880MA_Dispersion_Analyser/Sedimentation_vs_Spectral_Ratio.png" alt="Sedimentation vs. Spectral Ratio" width="700">
+<img src="C12880MA_Dispersion_Analyser/Slopes.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
 * **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 205 % on the x-axis against the 650 nm/450 nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
