@@ -82,21 +82,29 @@ The initial optical behavior of the dispersion is captured across the raw spectr
 
 ### 2. Kinetic Breakdown & Multi-Parameter Analysis
 
-To understand the physical phenomena occurring inside the vial, the raw spectra were processed through the multiwavelength analytical framework, yielding three distinct diagnostic time profiles. The dispersion stability analysis provides insights into how the sample's spectral properties change over time, indicating potential physical processes like sedimentation, agglomeration, or flocculation.
+To understand the physical phenomena occurring inside the vial across the multiple spice suspension trials (**Turmeric High**, **Turmeric Low**, and **Coriander**), the raw spectra were processed through the multiwavelength analytical framework. This yielded three distinct diagnostic time profiles revealing how each sample's optical properties change over time due to processes like micro-bubble dissipation, particle rearrangement, and structural settling.
 
-* **Important Context:** The dispersion was shaken before logging, which influences initial spectral readings due to temporary air bubbles and increased initial homogeneity. After the logging run, sedimentation of particles was observed at the bottom of the vial.
+* **Important Context:** Each dispersion was vigorously shaken before logging, which significantly influences initial spectral readings due to temporary air-bubble generation and artificially depressed optical transmission. Following the initial clearance phase, distinct sedimentation and particle dynamics unfold depending on the substance and concentration.
+
+---
 
 ### Panel 1: Sedimentation Tracking (Total Scattering Mass)
-* **What it shows:** The normalised total integrated intensity starts at a baseline of 100 % and climbs sharply over the first 10 to 15 minutes, reaching ~180 % by minute 10 and stabilising near a plateau of 190 % to 202 % for the remainder of the run.
-* **Physics Connection:** This unmasks the micro-bubble clearance phase. Vigorous manual shaking introduces micro-bubbles that severely scatter and block light, artificially depressing the initial transmission signal. As bubbles migrate to the surface and dissipate, the optical path clears, revealing the true underlying scattering behaviour of the suspension mass.
+* **What it shows:** Normalised total integrated intensity starts at a baseline of 100% and climbs progressively across all trials, though with drastically different magnitudes:
+  * **Turmeric Low Concentration** rises to approximately 200%.
+  * **Turmeric High Concentration** increases to over 400%.
+  * **Coriander** climbs steeply up to nearly 800%.
+* **Physics Connection:** This unmasks the initial micro-bubble clearance phase. Manual shaking introduces micro-bubbles that severely scatter and block light, depressing early signal counts. As these bubbles rapidly migrate to the surface and dissipate, the optical path clears, revealing the true underlying backscattering behavior and localised particle accumulation within the probe's sensing zone.
 
-* ### Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)
-* **What it shows:** The intensity ratio between 650 nm and 450 nm drops rapidly from an initial value of ~1.06 down to ~0.87 within the first 3 minutes, before gradually levelling off into a stable baseline around 0.75 by minute 15.
-* **Physics Connection:** This initial steep drop is heavily driven by the **transient clearance of micro-bubbles** introduced during manual shaking, which intensely scatter light and skew the early spectral ratio. As those bubbles rapidly rise and dissipate over the first few minutes, the optical path clears so that the true physical dynamics can emerge—reflecting the structural relaxation of larger clusters and their transition into a more uniform colloidal distribution before flattening into a stable baseline.
+### Panel 2: Agglomeration / Flocculation Tracking (Spectral Slope)
+* **What it shows:** The intensity ratio between 650 nm and 450 nm demonstrates a consistent downward trajectory across all datasets from different initial points:
+  * **Coriander** drops from ~1.25 down to a stable baseline around ~0.78.
+  * **Turmeric High** drops from ~2.75 down to ~1.5.
+  * **Turmeric Low** drops from ~1.06 down to ~0.75.
+* **Physics Connection:** The steep early drop is heavily driven by the transient clearance of micro-bubbles. Once the optical path clears, the true physical dynamics emerge—reflecting structural relaxation, particle rearrangement, and changes in multi-wavelength scattering efficiencies before flattening into stable operational baselines.
 
 ### Panel 3: Peak Shift Tracking
-* **What it shows:** The apex wavelength of the primary dispersion band oscillates within a discrete band between ~581.25 nm and ~598.75 nm, featuring sharp quantisation steps with prominent transient spikes reaching nearly 599 nm at approximately minutes 2, 12, and 27.
-* **Physics Connection:** This demonstrates the limits and behaviour of pixel-resolution quantisation on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes capture genuine, momentary bulk shifts where transient cluster migrations altered the spectral envelope's center of mass.
+* **What it shows:** The apex wavelength of the primary dispersion band oscillates within a stable spectral band (e.g., fluctuating between ~590 nm and ~602 nm for Coriander), featuring sharp quantisation steps and occasional transient spikes.
+* **Physics Connection:** This demonstrates the operational limits of pixel-resolution quantisation on discrete spectrometer arrays. As the true optical peak center shifts subtly, the algorithm snaps between adjacent physical pixel columns, while transient spikes capture momentary bulk shifts where local particle migrations alter the spectral envelope's centre of mass.
 
 <img src="C12880MA_Dispersion_Analyser/Tracker_Coriander.png" alt="Three-panel kinetic analysis of coriander dispersion" width="700">
 <img src="C12880MA_Dispersion_Analyser/Tracker_Turmeric_High.png" alt="Three-panel kinetic analysis of turmeric_high dispersion" width="700">
