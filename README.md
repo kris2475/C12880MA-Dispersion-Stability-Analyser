@@ -150,7 +150,7 @@ These visualisations confirm a robust inverse relationship mapping optical scatt
 <img src="C12880MA_Dispersion_Analyser/Slopes.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
-* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 780 % on the x-axis—varying by substance up to ~205 % for Turmeric Low, ~440 % for Turmeric High, and ~780 % for Coriander - against the 650 nm/450 nm Spectral Ratio spanning from ~0.74 up to ~2.75 on the y-axis.
+* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 780 % on the x-axis - varying by substance up to ~205 % for Turmeric Low, ~440 % for Turmeric High, and ~780 % for Coriander - against the 650 nm/450 nm Spectral Ratio spanning from ~0.74 up to ~2.75 on the y-axis.
 * **Inverse Proportionality:** As the Normalised Total Intensity increases across all trials (driven heavily in the initial phase by the rapid clearance of scattering micro-bubbles and enhanced optical path clarity), the Spectral Ratio systematically decreases for each respective dataset, following strong linear regression fits:
   * **Coriander:** $y = -0.001x + 1.196$ ($R^2 = 0.89$)
   * **Turmeric High Concentration:** $y = -0.003x + 2.867$ ($R^2 = 0.98$)
