@@ -70,7 +70,7 @@ To validate the multiwavelength pipeline under real-world conditions, a dynamic 
 ### 1. Raw Spectral Evolution: Waterfall & Spectrogram View
 The initial optical behavior of the dispersion is captured across the raw spectral response. 
 
-<img src="C12880MA_Dispersion_Analyser/Spectrogram.png" alt="Waterfall plot of raw turmeric spectra" width="700"> 
+<img src="C12880MA_Dispersion_Analyser/Spectral_Evolution_Coriander.png" alt="Waterfall plot of coriander dispersion spectra" width="700"> 
 
 ---
 
