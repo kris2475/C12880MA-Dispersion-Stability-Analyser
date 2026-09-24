@@ -98,8 +98,9 @@ To understand the physical phenomena occurring inside the vial, the raw spectra 
 * **What it shows:** The apex wavelength of the primary dispersion band oscillates within a discrete band between ~581.25 nm and ~598.75 nm, featuring sharp quantisation steps with prominent transient spikes reaching nearly 599 nm at approximately minutes 2, 12, and 27.
 * **Physics Connection:** This demonstrates the limits and behaviour of pixel-resolution quantisation on discrete spectrometer arrays. As the true optical peak centre shifts subtly, the algorithm snaps between adjacent physical pixel columns. The larger spikes capture genuine, momentary bulk shifts where transient cluster migrations altered the spectral envelope's center of mass.
 
-<img src="C12880MA_Dispersion_Analyser/plots.png" alt="Three-panel kinetic analysis of turmeric dispersion" width="700">
-
+<img src="C12880MA_Dispersion_Analyser/Tracker_Coriander.png" alt="Three-panel kinetic analysis of coriander dispersion" width="700">
+<img src="C12880MA_Dispersion_Analyser/Tracker_Turmeric_High.png" alt="Three-panel kinetic analysis of turmeric_high dispersion" width="700">
+<img src="C12880MA_Dispersion_Analyser/Tracker_Turmeric_Low.png" alt="Three-panel kinetic analysis of turmeric_low dispersion" width="700">
 
 
 
