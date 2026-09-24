@@ -124,6 +124,29 @@ These visualisations confirm a robust inverse relationship mapping optical scatt
 * **Turmeric Low Concentration:** $y = -0.003x + 1.283$ ($R^2 = 0.97$)
 * **Coriander:** $y = -0.001x + 1.196$ ($R^2 = 0.89$)
 
+### Optical Confounding: Physical Scattering vs. Chemical Absorption
+
+While the $650\,\text{nm} / 450\,\text{nm}$ ratio provides a clean empirical proxy for tracking sedimentation dynamics, it is inherently subject to optical confounding. In suspensions containing complex organic matter like turmeric, physical particle scattering and chemical absorption occur simultaneously and blend together into a single measurement:
+
+* **The Chemical Component:** Turmeric contains curcumin, a potent pigment that heavily absorbs blue light around $430\text{--}450\,\text{nm}$. This strong chemical absorption artificially elevates the starting ratio compared to neutral spices or mineral silts.
+* **The Physical Component:** As larger aggregates and particles settle out, the overall cloudiness drops, altering the Mie-scattering slope across the spectrum. 
+
+Rather than acting as a pure, isolated measure of physical turbidity, the $650\,\text{nm} / 450\,\text{nm}$ ratio captures a coupled fingerprint of both particle-size evolution and chemical concentration. While this complicates single-variable physical modeling, it creates a highly repeatable, distinct composite signature that downstream machine learning pipelines can leverage to simultaneously resolve physical settling behavior and chemical composition.
+
+
+
+### 3. Sedimentation vs. Spectral Ratio
+
+### Correlation and Regression Dynamics
+
+The strong negative Pearson correlation coefficients observed across all spice dispersion trials—**Turmeric Low Concentration** ($r = -0.9834$), **Turmeric High Concentration** ($r = -0.9880$), and **Coriander** ($r = -0.9419$)—are clearly illustrated in the comparative scatter plot below. 
+
+These visualisations confirm a robust inverse relationship mapping optical scattering mass (sedimentation proxy) against spectral slope dynamics, which are heavily influenced during the early phase by micro-bubble clearance and subsequent particle rearrangement.
+
+* **Turmeric High Concentration:** $y = -0.003x + 2.867$ ($R^2 = 0.98$)
+* **Turmeric Low Concentration:** $y = -0.003x + 1.283$ ($R^2 = 0.97$)
+* **Coriander:** $y = -0.001x + 1.196$ ($R^2 = 0.89$)
+
 <img src="C12880MA_Dispersion_Analyser/Slopes.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
