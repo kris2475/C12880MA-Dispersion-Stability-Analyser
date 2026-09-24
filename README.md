@@ -127,6 +127,7 @@ These visualisations confirm a robust inverse relationship mapping optical scatt
 <img src="C12880MA_Dispersion_Analyser/Slopes.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
 #### Correlation Analysis & Physical Coupling
-* **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 205 % on the x-axis against the 650 nm/450 nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
-* **Inverse Proportionality:** As the Normalised Total Intensity increases (driven heavily in the initial phase by the rapid clearance of scattering micro-bubbles and enhanced optical path clarity) the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75.
-* **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of transient micro-bubble and scattering obstructions aligns directly with the structural relaxation and settling of larger particle agglomerates into a stable colloidal state.
+    * **Axes & Range:** The plot maps the Normalised Total Intensity (%) from a baseline of 100 % up to approximately 205 % on the x-axis against the 650 nm/450 nm Spectral Ratio spanning from ~0.74 to 1.07 on the y-axis.
+    * **Inverse Proportionality:** As the Normalised Total Intensity increases (driven heavily in the initial phase by the rapid clearance of scattering micro-bubbles and enhanced optical path clarity) the Spectral Ratio systematically decreases from an initial peak of ~1.06 down to a stable baseline around 0.74 to 0.75.
+    * **Physical Significance:** This tight coupling demonstrates that the optical evolution of the dispersion is governed by simultaneous mechanisms: the progressive elimination of transient micro-bubble and scattering obstructions aligns directly with the structural relaxation and settling of larger particle agglomerates into a stable colloidal state.
+    ```
