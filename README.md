@@ -71,7 +71,8 @@ To validate the multiwavelength pipeline under real-world conditions, a dynamic 
 The initial optical behavior of the dispersion is captured across the raw spectral response. 
 
 <img src="C12880MA_Dispersion_Analyser/Spectral_Evolution_Coriander.png" alt="Waterfall plot of coriander dispersion spectra" width="700"> 
-
+<img src="C12880MA_Dispersion_Analyser/Spectral_Evolution_Turmeric_High.png" alt="Waterfall plot of turmeric_high dispersion spectra" width="700"> 
+<img src="C12880MA_Dispersion_Analyser/Spectral_Evolution_Turmeric_Low.png" alt="Waterfall plot of tumeric_low dispersion spectra" width="700"> 
 ---
 
 * **What we are seeing:** The raw waterfall/overlay plot above demonstrates the complete spectral signature captured by the Hamamatsu C12880MA spectrometer, ranging from the UV-visible cutoff through the characteristic curcuminoid absorption and scattering bands (peaking around 560 – 590 nm). 
