@@ -114,7 +114,15 @@ To understand the physical phenomena occurring inside the vial across the multip
 
 ### 3. Sedimentation vs. Spectral Ratio
 
-The strong negative Pearson correlation coefficient of -0.9834 observed between normalized total intensity and the spectral ratio is clearly illustrated in the scatter plot below. This visualisation confirms a robust inverse relationship mapping optical scattering mass against spectral slope dynamics, heavily influenced during the early phase by micro-bubble clearance.
+### Correlation and Regression Dynamics
+
+The strong negative Pearson correlation coefficients observed across all spice dispersion trials—**Turmeric Low Concentration** ($r = -0.9834$), **Turmeric High Concentration** ($r = -0.9880$), and **Coriander** ($r = -0.9419$)—are clearly illustrated in the comparative scatter plot below. 
+
+These visualisations confirm a robust inverse relationship mapping optical scattering mass (sedimentation proxy) against spectral slope dynamics, which are heavily influenced during the early phase by micro-bubble clearance and subsequent particle rearrangement.
+
+* **Turmeric High Concentration:** $y = -0.003x + 2.867$ ($R^2 = 0.98$)
+* **Turmeric Low Concentration:** $y = -0.003x + 1.283$ ($R^2 = 0.97$)
+* **Coriander:** $y = -0.001x + 1.196$ ($R^2 = 0.89$)
 
 <img src="C12880MA_Dispersion_Analyser/Slopes.png" alt="Sedimentation vs. Spectral Ratio" width="700">
 
